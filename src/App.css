@@ -1,38 +1,35 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+.all-container { font-family: Nanum Brush Script;  } 
+/* Navbar.js */
+.login-button { display: flex; justify-content: flex-end; margin:2%; font-size: 1.3rem; gap:5px; align-items: center; cursor: pointer; }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.nav-section { display:flex; justify-content: center; padding: 10px; cursor: pointer; }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+.menu-area { display: flex; justify-content: center; position: relative; font-size: 1.3rem; cursor: pointer; } 
+.menu-list { display: flex; list-style: none; gap: 30px;}
+.menu-list li { padding: 10px; }
 
-.App-link {
-  color: #61dafb;
-}
+.search-container { position: absolute; right:2%; top:0; padding:10px; }
+.search-icon { position: relative; left: 20px;}
+.search-box { border:none; border-bottom: 2px solid #333; padding-left: 30px; padding-bottom: 5px; font-size: 1rem;}
+.search-box:focus { outline: none; border: none; border-bottom: 2px solid #333; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* ProductCard.js */
+.card-container { border: 2px solid #838383; border-radius: 10px; margin-bottom: 30px; font-size: 1.5rem; padding-left:5px; }
+.card-container:hover { transform: scale(1.1); transition: transform 0.8s ease; }
+
+.product-card-img { width: 100%; }
+
+.highlight { display: flex; font-size: 1.0rem; gap: 20px; }
+.highlight-choice { color: red; font-weight: 600; padding-left: 10px;}
+.highlight-new { color: blue; font-weight: 600; padding-left: 10px;}
+
+/* ProductDetail.js */
+.product-img { display: flex; justify-content: flex-end; }
+.product-detail-text { font-size: 1.2rem; display:flex; flex-direction: column; justify-content: center;}
+
+@media screen and (max-width:991px) {
+    .menu-list { display :none; }
+    .search-container {position: relative;}    
+    }
